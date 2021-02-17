@@ -14,13 +14,17 @@ export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
   /* height: 860px; */
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-height: 540px) {
+    min-height: 125vh;
+  }
 `;
 
 export const InfoRow = styled.div`

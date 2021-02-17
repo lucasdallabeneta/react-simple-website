@@ -3,19 +3,15 @@ import colors from '../../Colors';
 
 export const ServicesContainer = styled.div`
   /* height: 800px; */
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: ${colors.light};
 
-  @media screen and (max-width: 768px) {
-    height: 1100px
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px
+  @media screen and (max-height: 480px) {
+    min-height: 150vh;
   }
 `;
 
@@ -30,14 +26,15 @@ export const ServicesWrapper = styled.div`
   padding: 0 10px;
 
   @media screen and (max-width: 1000px) {
-    grid-template-columns: 1fr 1fr; 
-    grid-gap: 30px;
+    /* grid-template-columns: 1fr 1fr;  */
+    grid-gap: 20px;
   }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr; 
     padding: 0 10px;
     grid-gap: 20px;
+    margin-bottom: 64px;
   }
 `;
 
@@ -53,7 +50,7 @@ export const ServicesCard = styled.div`
 
   box-shadow: 0 1px 5px rgba(0,0,0,0.2);
   transition: all 0.5s ease-in-out;
-
+  
   &:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
@@ -72,8 +69,9 @@ export const ServicesH1 = styled.h1`
   color: #000;
   margin-bottom: 64px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     font-size: 2rem;
+    margin-top: 64px;
   }
 `;
 
